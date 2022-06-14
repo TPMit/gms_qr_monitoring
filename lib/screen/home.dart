@@ -2,13 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
 import 'dart:io';
 import 'package:get_storage/get_storage.dart';
 import 'package:tpm_security_monitoring/helper/getStorage.dart' as constants;
-import 'package:tpm_security_monitoring/screen/daftarinsiden.dart';
 import 'package:tpm_security_monitoring/screen/fragment/components/dialogmessage.dart';
-import 'package:tpm_security_monitoring/screen/login.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -262,7 +259,7 @@ class _HomeState extends State<Home> {
                         onPressed: () {
                           showDialog(
                               context: context,
-                              builder: (context) => DialogMessage());
+                              builder: (context) => const DialogMessage());
                         },
                         onLongPress: () async {
                           try {

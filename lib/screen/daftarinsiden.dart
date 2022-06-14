@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:intl/intl.dart';
 
 import '../src/model/daftarinsidenmodel.dart';
 import 'fragment/components/custombackground.dart';

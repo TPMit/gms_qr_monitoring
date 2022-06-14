@@ -1,11 +1,14 @@
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
+
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
 
 class DialogMessage extends StatefulWidget {
+  const DialogMessage({Key? key}) : super(key: key);
+
   @override
   DialogMessageState createState() => DialogMessageState();
 }
@@ -40,28 +43,28 @@ class DialogMessageState extends State<DialogMessage> {
     return Stack(
       children: <Widget>[
         Container(
-          padding: EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
-          margin: EdgeInsets.only(top: 45),
+          padding: const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
+          margin: const EdgeInsets.only(top: 45),
           decoration: BoxDecoration(
               shape: BoxShape.rectangle,
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
+              boxShadow: const [
+                 BoxShadow(
                     color: Colors.black, offset: Offset(0, 10), blurRadius: 10),
               ]),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Text(
+              const Text(
                 "Kritik atau Saran",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 width: MediaQuery.of(context).size.width * 0.8,
                 height: MediaQuery.of(context).size.height * 0.2,
                 decoration: BoxDecoration(
@@ -76,12 +79,12 @@ class DialogMessageState extends State<DialogMessage> {
                     autofocus: true,
                     keyboardType: TextInputType.multiline,
                     maxLines: null,
-                    decoration: new InputDecoration.collapsed(
+                    decoration: const InputDecoration.collapsed(
                       hintText: "",
                     )),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 5, bottom: 15),
+              const Padding(
+                padding: EdgeInsets.only(top: 5, bottom: 15),
                 child: Align(
                   child: Text(
                     "Terima kasih atas kritik dan sarannya.",
@@ -93,7 +96,7 @@ class DialogMessageState extends State<DialogMessage> {
               Align(
                 alignment: Alignment.bottomRight,
                 child: IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.send,
                     color: Colors.teal,
                   ),
